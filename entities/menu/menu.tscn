@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://fonts/arial_64.tres" type="DynamicFont" id=1]
+[ext_resource path="res://entities/menu/menu.gd" type="Script" id=2]
+[ext_resource path="res://fonts/arial_48.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/title.tres" type="DynamicFont" id=4]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -625.0
+margin_top = -498.0
+margin_right = 626.0
+margin_bottom = 923.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_right = 1251.0
+margin_bottom = 352.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+text = "Local"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+margin_top = 356.0
+margin_right = 1251.0
+margin_bottom = 708.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+text = "Server"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+margin_top = 712.0
+margin_right = 1251.0
+margin_bottom = 1064.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+text = "Client"
+
+[node name="Button4" type="Button" parent="VBoxContainer"]
+margin_top = 1068.0
+margin_right = 1251.0
+margin_bottom = 1421.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+text = "Server + Client"
+
+[node name="Title" type="Label" parent="."]
+margin_right = 3839.0
+margin_bottom = 481.0
+custom_fonts/font = ExtResource( 4 )
+text = "Platform Buddies!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 3111.27
+margin_top = 2019.5
+margin_right = 3813.27
+margin_bottom = 2132.5
+custom_fonts/font = ExtResource( 3 )
+text = "WASD / Arrows Controls [Space]
+Ctrl + R to Restart Game"
