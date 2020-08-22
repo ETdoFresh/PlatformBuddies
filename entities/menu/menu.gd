@@ -6,6 +6,10 @@ const client_world = preload("res://entities/world/client.tscn")
 const both_worlds = preload("res://entities/world/both.tscn")
 
 func _ready():
+    if OS.get_name() == "HTML5":
+        $VBoxContainer/Button2.visible = false
+        $VBoxContainer/Button4.visible = false
+    
     var _1 = $VBoxContainer/Button.connect("pressed", self, "load_scene", [local_world])
     var _2 = $VBoxContainer/Button2.connect("pressed", self, "load_scene", [server_world])
     var _3 = $VBoxContainer/Button3.connect("pressed", self, "load_scene", [client_world])
