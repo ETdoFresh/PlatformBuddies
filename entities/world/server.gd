@@ -14,7 +14,10 @@ func _ready():
     websocket.connect("on_open", self, "create_player")
     websocket.connect("on_close", self, "remove_player")
     websocket.connect("on_receive", self, "update_input")
-    websocket.listen_insecure()
+    if get_parent() == get_tree().get_root():
+        websocket.listen()
+    else:
+        websocket.listen_insecure()
 
 func _physics_process(delta):
     tick += 1
