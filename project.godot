@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="PlatformBuddies"
 run/main_scene="res://entities/menu/menu.tscn"
-config/icon="res://icon.png"
+config/icon="res://entities/character/character_roundGreen.png"
 
 [autoload]
 
