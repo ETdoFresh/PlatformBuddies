@@ -5,5 +5,5 @@ But my Kasteroids project is filled with too many files to debug this issue, so 
 
 # Credits
 Graphic Credits go entirely to Kenney.nl. Many Thanks!
-![https://www.kenney.nl/assets/scribble-platformer](https://www.kenney.nl/content/3-assets/7-scribble-platformer/preview-kenney.png)
+[![https://www.kenney.nl/assets/scribble-platformer](https://www.kenney.nl/content/3-assets/7-scribble-platformer/preview-kenney.png)](https://www.kenney.nl/assets/scribble-platformer)
 https://www.kenney.nl/assets/scribble-platformer
