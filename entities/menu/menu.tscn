@@ -87,4 +87,7 @@ margin_top = 1414.0
 margin_right = 3783.0
 margin_bottom = 1506.0
 custom_fonts/font = ExtResource( 3 )
-text = "ws://localhost:11003"
+text = "ws://45.79.42.30:11003"
+__meta__ = {
+"_edit_use_anchors_": false
+}

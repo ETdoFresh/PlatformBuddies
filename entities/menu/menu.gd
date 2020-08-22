@@ -11,6 +11,7 @@ func _ready():
     var _3 = $VBoxContainer/Button3.connect("pressed", self, "load_scene", [client_world])
     var _4 = $VBoxContainer/Button4.connect("pressed", self, "load_scene", [both_worlds])
     
+    update_client_url($LineEdit.text)
     var _10 = $LineEdit.connect("text_changed", self, "update_client_url")
 
 func load_scene(scene):
