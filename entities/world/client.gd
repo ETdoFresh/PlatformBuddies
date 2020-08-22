@@ -12,7 +12,7 @@ onready var input = $KeyboardInput
 func _ready():
     randomize()
     websocket.connect("on_receive", self, "update_world")
-    websocket.open()
+    websocket.open(Settings.client_url)
 
 func _physics_process(delta):
     tick += 1

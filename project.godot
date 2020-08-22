@@ -22,6 +22,7 @@ config/icon="res://entities/character/character_roundGreen.png"
 [autoload]
 
 ReloadGame="*res://entities/autoload/reload_game.gd"
+Settings="*res://entities/autoload/settings.gd"
 
 [display]
 
