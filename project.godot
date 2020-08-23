@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "NetworkInput",
+"language": "GDScript",
+"path": "res://entities/network_input/network_input.gd"
+} ]
 _global_script_class_icons={
-
+"NetworkInput": ""
 }
 
 [application]

@@ -16,10 +16,15 @@ RUN wget https://downloads.tuxfamily.org/godotengine/3.2.2/Godot_v3.2.2-stable_l
     mv Godot_v3.2.2-stable_linux_server.64 /usr/local/bin/godot-server && \
     rm -f Godot_v3.2.2-stable_linux_server.64.zip
 
-RUN mkdir app
-COPY ./ app/
-RUN sed -i 's/run\/main_scene=.*/run\/main_scene="res:\/\/entities\/world\/server.tscn"/g' app/project.godot
-WORKDIR app
+COPY ./.import app/.import
+COPY ./entities app/entities
+COPY ./fonts app/fonts
+COPY ./keys app/keys
+COPY ./default_env.tres app/default_env.tres
+COPY ./project.godot app/project.godot
 
+RUN sed -i 's/run\/main_scene=.*/run\/main_scene="res:\/\/entities\/world\/server.tscn"/g' app/project.godot
+
+WORKDIR app
 CMD gdb -ex run --args /usr/local/bin/godot-server --path /app
 #CMD godot-server

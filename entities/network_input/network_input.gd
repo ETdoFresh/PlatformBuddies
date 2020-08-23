@@ -1,10 +1,15 @@
+class_name NetworkInput
 extends Node
 
+var client # Testing if reference causes websocket issue
 var x = 0
 var jump = false
 var was_jump = false
 var start_jump = false
 var stop_jump = false
+
+func _init(init_client):
+    client = init_client
 
 func simulate(_delta):
     if jump:
