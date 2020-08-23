@@ -35,11 +35,6 @@ func create_player(client):
     var player = {"input": input, "character": character, "host": client.get_connected_host(), "port": client.get_connected_port()}
     players[client] = player
     console_write_ln("A Client has connected! %s:%s" % [player.host, player.port])
-    
-    ## -------------------------------------------------------------------------
-    $CanvasLayer/ServerStats.add_stat("X", input, "x", false) ## << ERROR: This causes Issue #33279
-    ## -------------------------------------------------------------------------
-    
 
 func remove_player(client):
     var player = players[client]

@@ -1,7 +1,9 @@
-# PlatformBuddies
+# Platform Buddies!
 This is a demo project for testing and troubleshooting a WebSocket Server problem in Godot v3.2.2. 
 I'm not exactly sure at what point I'm having the issue. 
 But my Kasteroids project is filled with too many files to debug this issue, so here we are.
+
+*Instead of leaving the broken copy up, I decided to leave a fixed copy ([v0.0.6](https://github.com/ETdoFresh/PlatformBuddies/releases/tag/v0.0.6)) up and have it running for portfolio reasons :)*
 
 ## Issue trying to be Solved
 https://github.com/godotengine/godot/issues/33279#issuecomment-677406009

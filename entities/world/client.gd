@@ -11,6 +11,8 @@ onready var input = $KeyboardInput
 
 func _ready():
     randomize()
+    websocket.connect("on_open", self, "print_connected")
+    websocket.connect("on_close", self, "print_disconnected")
     websocket.connect("on_receive", self, "update_world")
     if get_parent() == get_tree().get_root():
         websocket.open(Settings.client_url)
@@ -22,6 +24,12 @@ func _physics_process(delta):
     input.simulate(delta)
     if tick % send_rate == 0:
         websocket.send(to_json(input.to_dictionary()))
+
+func print_connected():
+    print("Client Connected!")
+
+func print_disconnected():
+    print("Client Disconnected!")
 
 func update_world(message):
     from_dictionary(parse_json(message))
