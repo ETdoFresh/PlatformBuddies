@@ -1,5 +1,7 @@
 extends Node2D
 
+const NETWORK_INPUT = preload("res://entities/network_input/network_input.tscn")
+
 var tick = 0
 var players = {}
 var send_rate = 1 # Ticks (- 1) between sending input
@@ -27,26 +29,24 @@ func _physics_process(delta):
         websocket.broadcast(to_json(to_dictionary()))
 
 func create_player(client):
-    ## -------------------------------------------------------------------------
-    var input = NetworkInput.new(client) ## << ERROR: This may causes Issue #33279
-    ## -------------------------------------------------------------------------
-    
+    var input = NETWORK_INPUT.instance()
     add_child(input)
     var character = level1.spawn_random_character(input)
-    players[client] = {"input": input, "character": character, "host": client.get_}
+    var player = {"input": input, "character": character, "host": client.get_connected_host(), "port": client.get_connected_port()}
+    players[client] = player
+    console_write_ln("A Client has connected! %s:%s" % [player.host, player.port])
     
     ## -------------------------------------------------------------------------
-    $CanvasLayer/ServerStats.add_stat("X", input, "x", false) ## << ERROR: This may causes Issue #33279
+    $CanvasLayer/ServerStats.add_stat("X", input, "x", false) ## << ERROR: This causes Issue #33279
     ## -------------------------------------------------------------------------
     
-    console_write_ln("A Client has connected!")
 
 func remove_player(client):
     var player = players[client]
     player.input.queue_free()
     player.character.queue_free()
+    console_write_ln("A Client has disconnected! %s:%s" % [player.host, player.port])
     players.erase(client)
-    console_write_ln("A Client has connected!")
 
 func update_input(client, message):
     players[client].input.from_dictionary(parse_json(message))

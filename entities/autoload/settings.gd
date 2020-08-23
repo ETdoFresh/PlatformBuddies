@@ -1,6 +1,6 @@
 extends Node
 
-const VERSION = "v0.0.4"
+const VERSION = "v0.0.5"
 
 var client_url = "ws://localhost:11003"
 
