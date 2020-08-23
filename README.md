@@ -11,6 +11,9 @@ https://github.com/godotengine/godot/issues/33279#issuecomment-677406009
 ## Update 8/22/2020
 [![Platform Buddies - Debugging Godot WebSocket Server Issue #33279](http://img.youtube.com/vi/3SgV7pT1kP0/0.jpg)](https://youtu.be/3SgV7pT1kP0 "Platform Buddies - Debugging Godot WebSocket Server Issue #33279")
 
+## Update 8/23/2020
+Issue found and posted in [v0.0.5](https://github.com/ETdoFresh/PlatformBuddies/releases/tag/v0.0.5). It was in my code, not a problem with Godot. Will fix it, and leave up a version of v0.0.6 which should run with no server crash issues (Hopefully :) )
+
 # Credits
 Graphic Credits go entirely to Kenney.nl. Many Thanks!
 [![https://www.kenney.nl/assets/scribble-platformer](https://www.kenney.nl/content/3-assets/7-scribble-platformer/preview-kenney.png)](https://www.kenney.nl/assets/scribble-platformer)
