@@ -2,7 +2,7 @@ FROM ubuntu
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
-	gdb \
+#	gdb \
     git \
     python \
     python-openssl \
@@ -26,5 +26,5 @@ COPY ./project.godot app/project.godot
 RUN sed -i 's/run\/main_scene=.*/run\/main_scene="res:\/\/entities\/world\/server.tscn"/g' app/project.godot
 
 WORKDIR app
-CMD gdb -ex run --args /usr/local/bin/godot-server --path /app
-#CMD godot-server
+#CMD gdb -ex run --args /usr/local/bin/godot-server --path /app
+CMD godot-server
