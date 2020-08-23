@@ -6,6 +6,8 @@ const client_world = preload("res://entities/world/client.tscn")
 const both_worlds = preload("res://entities/world/both.tscn")
 
 func _ready():
+    $Label.text += Settings.VERSION
+    
     if OS.get_name() == "HTML5":
         $VBoxContainer/Button2.visible = false
         $VBoxContainer/Button4.visible = false

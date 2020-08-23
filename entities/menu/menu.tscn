@@ -5,7 +5,7 @@
 [ext_resource path="res://fonts/arial_48.tres" type="DynamicFont" id=3]
 [ext_resource path="res://fonts/title.tres" type="DynamicFont" id=4]
 
-[node name="Control" type="Control"]
+[node name="Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
@@ -32,7 +32,7 @@ margin_bottom = 352.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 1 )
-text = "Local"
+text = "Play Offline"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 margin_top = 356.0
@@ -41,7 +41,7 @@ margin_bottom = 708.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 1 )
-text = "Server"
+text = "Host Dedicated Server"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 margin_top = 712.0
@@ -50,7 +50,7 @@ margin_bottom = 1064.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 1 )
-text = "Client"
+text = "Play Online"
 
 [node name="Button4" type="Button" parent="VBoxContainer"]
 margin_top = 1068.0
@@ -59,7 +59,7 @@ margin_bottom = 1421.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 1 )
-text = "Server + Client"
+text = "Host Server and Play Online"
 
 [node name="Title" type="Label" parent="."]
 margin_right = 3839.0
@@ -72,15 +72,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
-margin_left = 3111.27
-margin_top = 2019.5
-margin_right = 3813.27
-margin_bottom = 2132.5
-custom_fonts/font = ExtResource( 3 )
-text = "WASD / Arrows Controls [Space]
-Ctrl + R to Restart Game"
-
 [node name="LineEdit" type="LineEdit" parent="."]
 margin_left = 2583.0
 margin_top = 1414.0
@@ -88,6 +79,20 @@ margin_right = 3783.0
 margin_bottom = 1506.0
 custom_fonts/font = ExtResource( 3 )
 text = "wss://etdofresh-games.ddns.net:11003"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 3111.27
+margin_top = 1951.62
+margin_right = 3813.27
+margin_bottom = 2122.62
+custom_fonts/font = ExtResource( 3 )
+text = "WASD / Arrows Controls [Space]
+Ctrl + R to Restart Game
+"
+align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
